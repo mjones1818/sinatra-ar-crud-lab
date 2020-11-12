@@ -1,0 +1,16 @@
+<h3><%= @article.title %></h3>
+
+<P><%= @article.content %></P>
+
+<form action="/articles/<%= params[:id] %>/edit" method="get">
+  <button type="Edit">Edit this aritcle</button>
+</form>
+
+<form action="/articles/<%= params[:id] %>" method="post">
+  <input id="hidden" type="hidden" name="_method" value="DELETE">
+  <button type="submit" id="submit">Delete this post</button>
+</form>
+
+<form action="/articles" method="get">
+  <button type="submit" id="back">Back to all articles</button>
+</form>

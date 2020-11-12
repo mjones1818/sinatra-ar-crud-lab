@@ -1,0 +1,9 @@
+<form action="/articles/<%= params[:id] %>" method="post">
+  <input id="hidden" type="hidden" name="_method" value="PATCH">
+  <label for="text">Title</label><br>
+  <input type="text" name="article[title]" id="title" value="<%= Article.find_by_id(params[:id]).title %>"><br>
+  <label for="textarea">Content</label> <br>
+  <textarea name="article[content]" id="content" cols="30" rows="30">  <%= Article.find_by_id(params[:id]).content %> </textarea> <br>
+  <button type="submit">submit</button>
+</form>
+
